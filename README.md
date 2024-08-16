@@ -4,20 +4,44 @@ This is a simple interactive shell implemented in Go. It supports executing stan
 
 ## Features
 
-- **Command Execution**: Execute standard shell commands on Unix-like and Windows systems.
+- **Command Execution**: Execute basic shell commands like `ls`, `cd`, `pwd`, and more.
 - **Command History**: View a history of previously executed commands using the `history` command.
-- **Aliases**: Supports aliases for commands, such as `ll` for `ls -l`.
-- **Change Directory**: Use the `cd` command to change the current directory.
-- **Shell Prompt**: Displays a dynamic prompt with the user, hostname, and current directory.
+- **Cross-Platform Compatibility**: Automatically adjusts command execution for Unix-like and Windows systems.
+- **Custom Commands**: Extend the shell with custom Go commands.
 - **Clear Screen**: Clear the terminal screen with the `clear` command.
 - **Exit**: Exit the shell using the `exit` command.
-- **Platform Support**: Automatically adjusts command execution for Unix-like and Windows systems.
+- **Error Handling**: Basic error handling for unsupported commands or incorrect usage.
 
 ## Installation
 
-To build and run the shell, you need to have Go installed on your machine.
+To install and run the Go Shell application:
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/interimme/go-shell.git
-   ```
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/interimme/go-shell.git
+    cd go-shell
+    ```
+
+2. **Build the Application**:
+    ```bash
+    go build -o go-shell
+    ```
+
+3. **Run the Application**:
+    ```bash
+    ./go-shell
+    ```
+
+## Usage
+
+After running the `go-shell` executable, you can start typing commands as you would in a regular shell. Some basic commands are supported by default:
+
+- `pwd` - Prints the current working directory.
+- `cd <directory>` - Changes the current working directory.
+- `ls` - Lists files in the current directory.
+
+You can extend the shell by modifying the Go code and adding your own custom commands.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
